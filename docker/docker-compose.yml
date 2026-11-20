@@ -4,7 +4,7 @@ services:
       context: ..
       dockerfile: docker/Dockerfile
     ports:
-      - "127.0.0.1:5000:5000"
+      - "5000:5000"
     environment:
       - OLLAMA_HOST=${OLLAMA_HOST}
       - OLLAMA_PORT=11434
