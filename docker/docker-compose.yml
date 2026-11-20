@@ -9,8 +9,6 @@ services:
       - OLLAMA_HOST=${OLLAMA_HOST}
       - OLLAMA_PORT=11434
       - FLASK_APP=OllamaDashboard.py
-    networks:
-      - app_network
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
@@ -18,6 +16,3 @@ services:
       - ../app/static:/app/app/static:ro
       - ../app/templates:/app/app/templates:ro
 
-networks:
-  app_network:
-    driver: bridge
